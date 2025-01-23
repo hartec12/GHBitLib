@@ -226,7 +226,7 @@ namespace GHBit {
     //% blockGap=10
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function RGB_Program2(): neopixel.Strip {
+    export function RGB_Program(): neopixel.Strip {
          
         if (!yahStrip) {
             yahStrip = neopixel.create(DigitalPin.P4, 4, NeoPixelMode.RGB);
@@ -241,8 +241,8 @@ namespace GHBit {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
     export function RGB_Program_Close(): void {
         pins.digitalWritePin(DigitalPin.P4, 0);
-        GHBit.RGB_Program2().clear();
-        GHBit.RGB_Program2().show();
+        GHBit.RGB_Program().clear();
+        GHBit.RGB_Program().show();
     }
     
     //% blockId=GHBit_Min_Motor_Shake block="Min_Motor_Shake|value %value"
@@ -263,12 +263,12 @@ namespace GHBit {
         }               
     }
     
-    //% blockId=GHBit_Rocker block="Rocker|value %value"
+    //% blockId=GHBit_Rocker block="Rocker|value2 %value"
     //% weight=96
     //% blockGap=10
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
-    export function Rocker(value: enRocker): boolean {
+    export function Rocker(value2: enRocker): boolean {
 
         pins.setPull(DigitalPin.P8, PinPullMode.PullUp);
         let x = pins.analogReadPin(AnalogPin.P1);
@@ -300,7 +300,7 @@ namespace GHBit {
         }
         if (z == 0)
             now_state = enRocker.Press;
-        if (now_state == value)
+        if (now_state == value2)
             return true;
         else
             return false;

@@ -1,4 +1,4 @@
-﻿/*
+/*
 Copyright (C): 2010-2019, Shenzhen Yahboom Tech
 modified from liusen
 load dependency
@@ -221,7 +221,7 @@ namespace GHBit {
      * @param index
      */
     
-    //% blockId=GHBit_RGB_Program block="RGB_Program"
+    //% blockId=GHBit_RGB_Program block="RGB_Program2"
     //% weight=99
     //% blockGap=10
     //% color="#C814B8"

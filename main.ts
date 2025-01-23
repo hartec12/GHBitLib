@@ -221,12 +221,12 @@ namespace GHBit {
      * @param index
      */
     
-    //% blockId=GHBit_RGB_Program block="RGB_Program2"
+    //% blockId=GHBit_RGB_Program block="RGB_Program"
     //% weight=99
     //% blockGap=10
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function RGB_Program(): neopixel.Strip {
+    export function RGB_Program2(): neopixel.Strip {
          
         if (!yahStrip) {
             yahStrip = neopixel.create(DigitalPin.P4, 4, NeoPixelMode.RGB);
@@ -241,8 +241,8 @@ namespace GHBit {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
     export function RGB_Program_Close(): void {
         pins.digitalWritePin(DigitalPin.P4, 0);
-        GHBit.RGB_Program().clear();
-        GHBit.RGB_Program().show();
+        GHBit.RGB_Program2().clear();
+        GHBit.RGB_Program2().show();
     }
     
     //% blockId=GHBit_Min_Motor_Shake block="Min_Motor_Shake|value %value"

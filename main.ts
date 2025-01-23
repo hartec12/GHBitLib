@@ -276,6 +276,8 @@ namespace GHBit {
         let z = pins.digitalReadPin(DigitalPin.P8);
         let now_state = enRocker.Nostate;
 
+        basic.showNumber(x);
+        
         if (x < 200) // 上
         {
 
